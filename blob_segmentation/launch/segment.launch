@@ -1,0 +1,7 @@
+<launch>
+  <arg name="image_topic" default="/camera/rgb/image_raw"/>
+  <param name="image_topic" value="$(arg image_topic)" type="string"/>
+ <node pkg="blob_segmentation" name="segment_blob" type="segment_blob.py" output="screen">
+  </node>
+</launch>
+
