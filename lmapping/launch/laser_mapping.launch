@@ -1,0 +1,9 @@
+<launch>
+  <include file="$(find key_teleop)/launch/teleop.launch" >
+        <!-- Robotino -->  	
+	<!--arg name="vel_topic" value="/cmd_vel"/-->
+	<!-- Turtlebot -->
+	<arg name="vel_topic" value="/mobile_base/commands/velocity"/>
+  </include>
+  <node name="mapping" pkg="lmapping" type="laser_mapping.py"  />
+</launch>
